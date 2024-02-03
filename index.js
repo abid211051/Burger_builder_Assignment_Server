@@ -57,7 +57,7 @@ app.post("/order", async (req, res) => {
         else {
             neworder.paymentStatus = "Delivery on Process";
             await neworder.save();
-            res.status(200).send({ url: `https://burger-builder-client.netlify.app/orders` })
+            res.status(200).send({ url: `https://burger-builder-client.netlify.app/` })
         }
     } catch (error) {
         console.log(error.message)
@@ -73,7 +73,7 @@ app.post("/payment/success/:tranId", async (req, res) => {
             }
         })
         if (orderdata.modifiedCount > 0) {
-            res.redirect(`https://burger-builder-client.netlify.app/orders`);
+            res.redirect(`https://burger-builder-client.netlify.app/`);
         }
     } catch (error) {
         res.redirect(`https://burger-builder-client.netlify.app/`);
