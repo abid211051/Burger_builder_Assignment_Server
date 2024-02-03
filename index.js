@@ -23,9 +23,9 @@ app.post("/order", async (req, res) => {
                 total_amount: req.body.price,
                 currency: 'BDT',
                 tran_id: tran_id, // use unique tran_id for each api call
-                success_url: `http://localhost:3001/payment/success/${tran_id}`,
-                fail_url: `http://localhost:3001/payment/fail/${tran_id}`,
-                cancel_url: `http://localhost:3001/payment/cancel/${tran_id}`,
+                success_url: `https://burger-builder-assignment-server.vercel.app/payment/success/${tran_id}`,
+                fail_url: `https://burger-builder-assignment-server.vercel.app/payment/fail/${tran_id}`,
+                cancel_url: `https://burger-builder-assignment-server.vercel.app/payment/cancel/${tran_id}`,
                 ipn_url: 'http://localhost:3001/payment/ipn',
                 shipping_method: 'Courier',
                 product_name: 'Burger',
