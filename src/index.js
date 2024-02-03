@@ -94,9 +94,6 @@ app.get("/api/orders/:userid", async (req, res) => {
     }
 })
 
-app.get('/', (req, res) => {
-    res.send("Hello World");
-})
 app.listen(process.env.PORT, () => {
     console.log(`Server is running in port ${process.env.PORT}`);
 })
