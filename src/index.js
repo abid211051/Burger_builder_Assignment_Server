@@ -93,6 +93,10 @@ app.get("/api/orders/:userid", async (req, res) => {
         res.status(500).send([]);
     }
 })
+
+app.get('/', (req, res) => {
+    res.send("Hello World");
+})
 app.listen(process.env.PORT, () => {
     console.log(`Server is running in port ${process.env.PORT}`);
 })
